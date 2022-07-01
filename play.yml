@@ -1,0 +1,20 @@
+- name: print local
+  hosts: all
+  gather_facts: true
+  tasks:
+    - block:
+        - debug:
+            var: ansible_play_hosts_all
+        - debug:
+            var: ansible_play_hosts
+        - set_fact:
+            down: "{{ ansible_play_hosts_all|difference(ansible_play_hosts) }}"
+        - debug:
+            var: down
+      run_once: true 
+
+
+    - template: 
+          src: template.j2
+          dest: ./out
+      delegate_to: localhost

@@ -1,0 +1,6 @@
+ServerName,ConnectionStatus
+
+{% for host in groups['all'] -%}
+{{host}},{%- if host in down -%}Unreachable{%-else-%}Reachable{%-endif%}
+
+{%endfor-%}

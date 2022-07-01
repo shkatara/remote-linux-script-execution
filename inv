@@ -1,0 +1,5 @@
+servera
+testingserver.example.com
+serverb
+serverc
+localhost ansible_connection=local
