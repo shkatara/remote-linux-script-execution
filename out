@@ -2,7 +2,7 @@ Host Name, Connectivity Status, Operating System, Copy Status, Execution Status
 
 serverd,Unreachable,Unknown,Failed,Failed
 192.168.198.128,Reachable,RedHat,Successful,Successful
-192.168.198.129,Reachable,RedHat,Successful,Successful
+192.168.198.129,Unreachable,Unknown,Failed,Failed
 localhost,Reachable,OS Family Not Supported,Unsuccessful,Unsuccessful
 
 
