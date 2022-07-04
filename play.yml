@@ -13,8 +13,15 @@
             var: down
       run_once: true 
 
+    - name: run the script on the node
+      script: script.sh
+      register: script  
+      when: ansible_facts['distribution'] == 'RedHat'       
+      ignore_errors: true
+
 
     - template: 
           src: template.j2
           dest: ./out
       delegate_to: localhost
+      ignore_errors: true
