@@ -1,6 +1,8 @@
 - name: print local
   hosts: all
   gather_facts: true
+  vars:
+      script_name: "" 
   tasks:
     - block:
         - debug:
@@ -14,7 +16,7 @@
       run_once: true 
 
     - name: run the script on the node
-      script: script.sh
+      script: scripts/{{script_name}}
       register: script  
       when: ansible_facts['distribution'] == 'RedHat'       
       ignore_errors: true

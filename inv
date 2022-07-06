@@ -1,4 +1,5 @@
 serverd
 192.168.198.128 ansible_user=root ansible_password=q
 192.168.198.129 ansible_user=root ansible_password=q
+192.168.198.130 ansible_user=shubham ansible_password=q
 localhost ansible_connection=local

@@ -1,7 +1,8 @@
 Host Name, Execution Status, Description
 
 serverd,Failed,Server Not Reachable
-192.168.198.128,Successful,uid=0(root) gid=0(root) groups=0(root) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
-192.168.198.129,Successful,/root/.ansible/tmp/ansible-tmp-1657093349.9891486-4208-246854096450623/script.sh: line 2: id: command not found
+192.168.198.128,Successful,This will show the memory usage
+192.168.198.129,Successful,This will show the memory usage
+192.168.198.130,Successful,This will show the memory usage
 localhost,Failed,OS Not Supported
       
