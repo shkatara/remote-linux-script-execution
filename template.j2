@@ -1,21 +1,14 @@
-Host Name, Connectivity Status, Operating System, Copy Status, Execution Status
+Host Name, Execution Status, Description
 
 {% for host in groups['all'] -%}
-
 {{host}},
     {%- if host in down -%}
-Unreachable,Unknown,Failed,Failed
+Failed,Server Not Reachable
       {%- elif hostvars[host]['ansible_distribution'] !='RedHat' -%}
-Reachable,OS Family Not Supported,Unsuccessful,Unsuccessful
+Failed,OS Not Supported
+      {# %- elif hostvars[host]['ansible_distribution'] =='RedHat' and  hostvars[host]['script']['rc'] == 0 -% #}
       {%- elif hostvars[host]['ansible_distribution'] =='RedHat' -%}
-Reachable,{{hostvars[host]['ansible_facts']['distribution']}},
-        {%- if hostvars[host]['script']['rc'] != 0 -%}
-Failed,Failed
-          {%- else -%}
-Successful,Successful
-        {%-endif-%}
-    {%- endif %}
+Successful,{{hostvars[host]['script']['stdout_lines'][0]}}
+    {%-endif%}
 
 {%endfor-%}
-
-

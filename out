@@ -1,8 +1,7 @@
-Host Name, Connectivity Status, Operating System, Copy Status, Execution Status
+Host Name, Execution Status, Description
 
-serverd,Unreachable,Unknown,Failed,Failed
-192.168.198.128,Reachable,RedHat,Successful,Successful
-192.168.198.129,Unreachable,Unknown,Failed,Failed
-localhost,Reachable,OS Family Not Supported,Unsuccessful,Unsuccessful
-
-
+serverd,Failed,Server Not Reachable
+192.168.198.128,Successful,uid=0(root) gid=0(root) groups=0(root) context=unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.c1023
+192.168.198.129,Successful,/root/.ansible/tmp/ansible-tmp-1657093349.9891486-4208-246854096450623/script.sh: line 2: id: command not found
+localhost,Failed,OS Not Supported
+      
